@@ -11,9 +11,9 @@ h2 {
   margin: 1rem 0.5rem;
 }
 
-.container {
+/* .container {
   display: flex;
-}
+} */
 
 progress {
   -webkit-appearance: none;

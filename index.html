@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Monster Killer</title>
 </head>
 <body>
@@ -11,15 +12,39 @@
   <header> header </header>
 
   <main>
-   // health levels
+    <!-- // health levels
     monster health
-    player health
+    player health -->
 
-   // controls
+    <div class="container">
+      <section id="health-levels">
+        <h2>MONSTER HEALTH</h2>
+        <progress id="monster-health" max="100" value="100">100%</progress>
+      </section>
+
+      <section>  
+        <h2>PLAYER HEALTH<span id="bonus-life">1</span></h2>
+        <progress id="player-health" max="100" value="100">100%</progress>
+      </section>
+
+    </div>
+
+     <!-- // controls
     attack
     strong attack
     heal
-    show log
+    show log -->
+
+    <div class="container">
+      <section id="controls">
+        <button id="attack-btn">ATTACK</button>
+        <button id="strong-attack-btn">STRONG ATTACK</button>
+        <button id="heal-btn">HEAL</button>
+        <button id="log-btn">SHOW LOG</button>
+      </section>
+    </div>  
+
+  
   </main>
 
   <footer>footer</footer>

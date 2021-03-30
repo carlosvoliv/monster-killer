@@ -10,6 +10,12 @@ let hasBonusLife = true;
 
 adjustHealthBars(chosenMaxLife);
 
+const reset = () => {
+  currentMonsterHealth  = chosenMaxLife;
+  currentPlayerHealth = chosenMaxLife;
+  resetGame(chosenMaxLife);
+};
+
 const endRound = () => {
   const initialPlayerHealth = currentPlayerHealth;
   const playerDamage = dealPlayerDamage(MONSTER_ATTACK_VALUE);
@@ -25,11 +31,17 @@ const endRound = () => {
   }
 
   if (currentMonsterHealth <= 0 && currentPlayerHealth > 0) {
-    alert('você ganhou mané');
+    alert('você ganhou mané');    
   } else if (currentPlayerHealth <= 0 && currentMonsterHealth > 0) {
-    alert('deu ruim, você perdeu');
+    alert('deu ruim, você perdeu');    
   } else if (currentPlayerHealth <= 0 && currentMonsterHealth <= 0) {
-    alert('you have a draw')
+    alert('you have a draw');    
+  }
+
+  if (
+    currentMonsterHealth <= 0 || currentPlayerHealth <= 0
+  ) {
+    reset();
   }
 }
 
@@ -68,4 +80,4 @@ const healPlayerHandler = () => {
 
 attackBtn.addEventListener('click', attackHandler);
 strongAttackBtn.addEventListener('click', strongAttackHandler);
-healBtn.addEventListener('click', healPlayerHandler)
+healBtn.addEventListener('click', healPlayerHandler);
